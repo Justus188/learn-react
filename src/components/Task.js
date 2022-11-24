@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import {FaTimes, FaExclamation} from 'react-icons/fa'
 
 const Task = ({task, onDelete, onToggle}) => {
@@ -9,6 +10,7 @@ const Task = ({task, onDelete, onToggle}) => {
           <FaExclamation style={{cursor:'pointer'}} onClick={() => onToggle(task.id)}/>
         </h3>
         <p>{task.day}</p>
+        <Link to={`/task/${task.id}`}>Details</Link>
     </div>
   )
 }
